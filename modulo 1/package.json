@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^4.22.0"
+  },
+  "scripts": {
+    "postinstall": "node -e \"const fs=require('fs'); const s='node_modules/@tensorflow/tfjs-node/deps/lib/tensorflow.dll'; const d='node_modules/@tensorflow/tfjs-node/lib/napi-v8/tensorflow.dll'; if(fs.existsSync(s)&&!fs.existsSync(d)){fs.copyFileSync(s,d); console.log('tensorflow.dll linked to napi-v8');}\""
+  }
+}
